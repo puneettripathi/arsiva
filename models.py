@@ -4,18 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_migrate import Migrate
-try:
-    from local_settings import *
-except ImportError:
-    from production_settings import *
 
 app = Flask(__name__)
 app.secret_key = '12345'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///app.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///company.db"
 db = SQLAlchemy(app)
-#Migrate won't work well on sqlite better to use mysql db
-migrate = Migrate(app, db)
 
 
 class Event(db.Model):
