@@ -1,0 +1,697 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "stocks",
+        "synonyms": ["Stocks", "Stocks", "Stcks", "Stock", "share", "shares", "Shares", "Share"]
+      },
+      {
+        "value": "shares",
+        "synonyms": ["Stocks", "Stocks", "Stcks", "Stock", "share", "shares", "Shares", "Share"]
+      },
+      {
+        "value": "high returns",
+        "synonyms": ["high returns", "good returns", "good shares", "bullish", "great returns"]
+      },
+      {
+        "value": "high",
+        "synonyms": ["high", "hi", "great", "High", "good"]
+      },
+      {
+        "value": "positive",
+        "synonyms": ["positive", "high", "hi", "great", "High", "good", "Positive", "Good"]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "howdy",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "who are you",
+        "intent": "intro",
+        "entities": []
+      },
+      {
+        "text": "who are you?",
+        "intent": "intro",
+        "entities": []
+      },
+      {
+        "text": "what can you do",
+        "intent": "intro",
+        "entities": []
+      },{
+        "text": "what can you do?",
+        "intent": "intro",
+        "entities": []
+      },
+      {
+        "text": "what do you do",
+        "intent": "intro",
+        "entities": []
+      },
+      {
+        "text": "what do you do?",
+        "intent": "intro",
+        "entities": []
+      },
+      {
+        "text": "yes",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yep",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "i am looking for some stock option",
+        "intent": "investment_search",
+        "entities": []
+      },
+      {
+        "text": "stock ideas for Microsoft",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "Microsoft",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "stock ideas for Apple",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "Apple",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "stock ideas for GOOGLE",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "GOOGLE",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "stock ideas for Amazon",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "Amazon",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is Amazon share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "Amazon",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is Microsoft share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "Microsoft",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is Altaba share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "Altaba",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is google share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "google",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is google's share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "google",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is altaba's share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "altaba",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is blackrock share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "blackrock",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is blackrock's share doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "blackrock",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is Microsoft doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "Microsoft",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is Altaba doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "Altaba",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is google doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "google",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is blackrock doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "blackrock",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is aaon doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "aaon",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "how is amazon doing",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "amazon",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "show me stock ideas for Amazon",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "Amazon",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "show me stock ideas for google",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "google",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "show me stock ideas for apple",
+        "intent": "stock_ideas",
+        "entities": [
+          {
+            "start": 24,
+            "end": 29,
+            "value": "apple",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "what is DEMA for blackrock",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 17,
+            "end": 26,
+            "value": "blackrock",
+            "entity": "DEMA"
+          }
+        ]
+      },
+      {
+        "text": "what is DEMA for amazon",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "amazon",
+            "entity": "DEMA"
+          }
+        ]
+      },
+      {
+        "text": "what is TRIMA for blackrock",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 18,
+            "end": 27,
+            "value": "blackrock",
+            "entity": "TRIMA"
+          }
+        ]
+      },
+      {
+        "text": "what is DEMA for google",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "google",
+            "entity": "DEMA"
+          }
+        ]
+      },
+      {
+        "text": "what is TRIMA for amazon",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "amazon",
+            "entity": "DEMA"
+          }
+        ]
+      },
+      {
+        "text": "what is DEMA for amazon",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "amazon",
+            "entity": "DEMA"
+          }
+        ]
+      },
+      {
+        "text": "what is TRIMA for amazon",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "blackrock",
+            "entity": "TRIMA"
+          }
+        ]
+      },
+      {
+        "text": "what is STOCH for blackrock",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 18,
+            "end": 27,
+            "value": "blackrock",
+            "entity": "STOCH"
+          }
+        ]
+      },
+      {
+        "text": "what is STOCH for amazon",
+        "intent": "technical_analysis",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "amazon",
+            "entity": "STOCH"
+          }
+        ]
+      },
+      {
+        "text": "I want to buy a few shares",
+        "intent": "investment_search",
+        "entities": []
+      },
+      {
+        "text": "I am searching for shares",
+        "intent": "investment_search",
+        "entities": []
+      },
+      {
+        "text": "i am looking for shares with high returns",
+        "intent": "investment_search",
+        "entities": [
+          {
+            "start": 28,
+            "end": 35,
+            "value": "high returns",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "show me technology shares",
+        "intent": "investment_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "technology",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "show me automobile shares",
+        "intent": "investment_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "automobile",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "show me good automobile shares",
+        "intent": "investment_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "automobile",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "search me good automobile shares",
+        "intent": "investment_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "automobile",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "i am looking for an investment in safe shares",
+        "intent": "investment_search",
+        "entities": [
+          {
+            "start": 34,
+            "end": 38,
+            "value": "safe",
+            "entity": "shares"
+          }
+        ]
+      },
+      {
+        "text": "search for investments",
+        "intent": "investment_search_full",
+        "entities": [
+          {
+            "start": 11,
+            "end": 21,
+            "value": "shares",
+            "entity": "full"
+          }
+        ]
+      },
+      {
+        "text": "show me some investments",
+        "intent": "investment_search_full",
+        "entities": [
+          {
+            "start": 11,
+            "end": 21,
+            "value": "shares",
+            "entity": "full"
+          }
+        ]
+      },
+      {
+        "text": "search for good investments",
+        "intent": "investment_search_full",
+        "entities": [
+          {
+            "start": 11,
+            "end": 21,
+            "value": "shares",
+            "entity": "full"
+          }
+        ]
+      },
+      {
+        "text": "search me some investment ideas",
+        "intent": "investment_search_full",
+        "entities": [
+          {
+            "start": 11,
+            "end": 21,
+            "value": "shares",
+            "entity": "full"
+          }
+        ]
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "good bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "stop",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "end",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      }
+    ]
+  }
+}

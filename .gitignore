@@ -1,0 +1,13 @@
+venv/
+model_area/
+projects*/
+nlu/
+.spyproject
+app.db
+.idea/
+__pycache__
+extract.py
+getSchedule.py
+Yahoo*.py
+data/
+static/images/
