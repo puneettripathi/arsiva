@@ -34,8 +34,6 @@ def hello_world():
 
 
 get_random_response = lambda intent: random.choice(response[intent])
-proxies = {"http": "http://del-webproxy.blackrock.com:8080",
-           "https": "https://del-webproxy.blackrock.com:8080"}
 
 
 def format_entities(entities):
@@ -66,7 +64,7 @@ def get_stock_information(ticker):
         for tckr in lookup:
             url = "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol="+ tckr +"&apikey=FA7LT15XX0KG0BZP"
             # print("url is =>"+url)
-            jsondata = json.loads(requests.get(url, proxies=proxies).text)["Monthly Time Series"]
+            jsondata = json.loads(requests.get(url).text)["Monthly Time Series"]
             df = pd.DataFrame(jsondata).T.sort_index(ascending=False)[0:52]
             newdf = pd.DataFrame()
             newdf['open'] = df["1. open"].astype("float")
@@ -80,7 +78,7 @@ def get_stock_information(ticker):
             url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" + tckr + "&apikey=FA7LT15XX0KG0BZP"
             # print("url is =>" + url)
             # print()
-            jsondata = json.loads(requests.get(url, proxies=proxies).text)["Time Series (Daily)"]
+            jsondata = json.loads(requests.get(url).text)["Time Series (Daily)"]
             df = pd.DataFrame(jsondata).T.sort_index(ascending=False)[0:90]
             newdf = pd.DataFrame()
             newdf['open'] = df["1. open"].astype("float")
@@ -107,7 +105,7 @@ def get_technical_analyis(stockname, analysis_type=None, interval="weekly"):
         analysis_type = "SMA"
     tckr = lookup[0]
     url = "https://www.alphavantage.co/query?function="+analysis_type+"&symbol="+tckr+"&interval="+interval+"&apikey=" + app_key + "&time_period=10&series_type=open"
-    jsondata = json.loads(requests.get(url, proxies=proxies).text)["Technical Analysis: " + analysis_type]
+    jsondata = json.loads(requests.get(url).text)["Technical Analysis: " + analysis_type]
     df = pd.DataFrame(jsondata).T.sort_index(ascending=False)[0:90]
     for col in df.columns:
         df[col] = pd.to_numeric(df[col], errors='coerce')
