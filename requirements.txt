@@ -94,7 +94,7 @@ python-editor==1.0.3
 python-telegram-bot==10.0.2
 pytz==2018.4
 pywin32==223
-PyYAML==3.12
+PyYAML==5.4
 rasa-core==0.8.5
 rasa-nlu==0.12.0
 redis==2.10.6
