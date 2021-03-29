@@ -83,7 +83,7 @@ plac==0.9.6
 ply==3.11
 preshed==1.0.0
 protobuf==3.5.2.post1
-Pygments==2.2.0
+Pygments==2.7.4
 pykwalify==1.6.0
 pyparsing==2.2.0
 pypiwin32==223
